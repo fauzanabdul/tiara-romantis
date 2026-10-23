@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fff0f5">
+<title>Untuk Tiara ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#f48eae;--rose:#e96f98;--plum:#75435e;--ink:#513347;--muted:#a2768c;--cream:#fffaf7;--lilac:#c9b5f5;--glass:rgba(255,255,255,.68);--shadow:0 24px 70px rgba(131,66,103,.16);box-sizing:border-box}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:20px}
+body{margin:0;min-height:100vh;overflow-x:hidden;font-family:"DM Sans",sans-serif;color:var(--ink);text-align:center;background:radial-gradient(ellipse at 12% 12%,#ffe0eb 0,transparent 36%),radial-gradient(ellipse at 88% 20%,#e9ddff 0,transparent 35%),linear-gradient(145deg,#fff6f2,#fff0f6 52%,#f4edff);background-attachment:fixed}
+button,input{font:inherit}
+button{touch-action:manipulation}
+h1,h2{font-family:"Playfair Display",serif;font-weight:700;letter-spacing:-.035em}
+h1{font-size:clamp(2.5rem,8vw,4.5rem);line-height:1.08;margin:12px 0}
+h2{font-size:clamp(2rem,6vw,3rem);line-height:1.15;margin:8px 0 18px}
+p{line-height:1.8}
+section{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:76px 20px 46px;position:relative;isolation:isolate}
+.hidden{display:none!important}
+.eyebrow{font-size:.72rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--rose)}
+.subtitle{color:var(--muted);max-width:440px;margin:10px auto 25px}
+.card{width:min(100%,480px);padding:clamp(25px,6vw,42px);border:1px solid rgba(255,255,255,.85);border-radius:30px;background:var(--glass);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:var(--shadow);animation:cardIn .8s cubic-bezier(.2,.8,.2,1) both}
+.btn{border:0;border-radius:999px;padding:15px 25px;color:white;font-weight:800;letter-spacing:.01em;background:linear-gradient(120deg,var(--rose),#c49af0);box-shadow:0 10px 24px rgba(226,111,152,.25);cursor:pointer;transition:transform .22s,box-shadow .22s;min-height:50px}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(226,111,152,.32)}
+.btn:active{transform:scale(.97)}
+.btn.secondary{background:#eadfea;color:var(--plum);box-shadow:none}
+.big{font-size:clamp(3.7rem,12vw,5.5rem);line-height:1.2;filter:drop-shadow(0 10px 12px #eaa1c055);animation:float 3.5s ease-in-out infinite}
+.hero{max-width:600px}
+.hero .big{margin-bottom:12px}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid #fff;background:#ffffff8a;border-radius:999px;color:var(--plum);font-size:.8rem;font-weight:800}
+.date-wrap{display:flex;flex-direction:column;gap:10px;text-align:left;margin:24px 0 14px}
+.date-wrap label{font-size:.85rem;font-weight:800;color:var(--plum)}
+.date-wrap input{width:100%;border:1px solid #ead4e1;border-radius:16px;padding:15px 16px;background:#fffafc;color:var(--ink);outline:none;min-height:54px}
+.date-wrap input:focus{border-color:var(--rose);box-shadow:0 0 0 4px #f48eae24}
+.error{min-height:24px;color:#c34d79;font-size:.88rem;font-weight:700;margin:8px 0 0}
+.note{font-size:.8rem;color:var(--muted);margin:15px 0 0}
+#music{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right:14px;z-index:50;width:48px;height:48px;padding:0;border-radius:50%;font-size:1.2rem}
+#back{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));left:14px;z-index:50;padding:0 20px;min-height:48px;font-size:.85rem}
+#typed{min-height:8em;white-space:pre-wrap;font-size:1.04rem;line-height:1.95;text-align:center}
+.cursor{animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.gallery{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:24px 12px 30px;width:min(100%,760px);scrollbar-width:thin;scrollbar-color:#e8afca transparent}
+.pol{flex:0 0 230px;scroll-snap-align:center;padding:12px 12px 18px;background:#fffdfc;border-radius:16px;box-shadow:0 15px 35px #78425d20;transform:rotate(-2deg);transition:transform .25s}
+.pol:nth-child(even){transform:rotate(2.5deg)}
+.pol:hover{transform:translateY(-7px) rotate(0)}
+.ph{height:235px;border-radius:10px;display:grid;place-items:center;font-size:4rem;background:linear-gradient(145deg,#ffd6e5,#e8ddff);background-size:cover;background-position:center;overflow:hidden}
+.pol p{margin:13px 0 0;font-weight:800;font-size:.92rem;color:var(--plum)}
+.count{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:25px 0 16px}
+.count div{padding:16px 5px;border-radius:18px;background:linear-gradient(145deg,#fff0f5,#f0e8ff);border:1px solid #fff}
+.count b{display:block;font-size:clamp(1.35rem,5vw,2rem);font-weight:800;color:var(--plum);font-variant-numeric:tabular-nums}
+.count span{display:block;font-size:.7rem;color:var(--muted);margin-top:4px}
+.row{display:flex;gap:12px;justify-content:center;align-items:center;min-height:70px;flex-wrap:wrap;margin-top:20px}
+#no{position:relative}
+.signature{font-family:"Playfair Display",serif;font-style:italic;font-size:1.35rem;color:var(--rose)}
+footer{padding:22px;color:#a77b91;font-size:.75rem}
+.fl{position:fixed;bottom:-50px;z-index:0;pointer-events:none;animation:rise linear forwards;filter:drop-shadow(0 4px 6px #d77da522)}
+@keyframes rise{to{transform:translateY(-115svh) rotate(35deg);opacity:0}}
+@keyframes float{50%{transform:translateY(-12px) rotate(3deg)}}
+@keyframes cardIn{from{opacity:0;transform:translateY(24px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:60}
+/* ===== MENU "Choose the Surprise" (warna & font sama dengan desain asli) ===== */
+.menu-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 10px;width:min(100%,520px);margin-top:6px}
+.opt{background:none;border:0;padding:0;color:var(--plum);cursor:pointer}
+.ico{width:150px;height:150px;margin:0 auto;display:grid;place-items:center;font-size:4.4rem;border-radius:50%;background:radial-gradient(circle,rgba(244,142,174,.42) 0,rgba(201,181,245,.3) 50%,transparent 72%);filter:drop-shadow(0 10px 12px #eaa1c055);transition:transform .3s}
+.opt:hover .ico,.opt:active .ico{transform:scale(1.1) rotate(-4deg)}
+.lab{display:inline-block;font-family:"Playfair Display",serif;font-style:italic;font-weight:700;font-size:1.55rem;padding:0 6px 3px;border-bottom:3px solid var(--rose);margin-top:4px}
+.disc{width:150px;height:150px;margin:8px auto 18px;border-radius:50%;background:radial-gradient(circle,var(--rose) 0 14%,var(--plum) 15% 100%);box-shadow:0 0 0 6px #fff,0 16px 36px rgba(131,66,103,.28);position:relative}
+.disc::after{content:"";position:absolute;inset:20px;border-radius:50%;border:1px solid #ffffff55;box-shadow:0 0 0 12px #ffffff14,0 0 0 13px #ffffff44}
+.spin{animation:spin 3s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+
+/* ===== Our Moment: galeri foto Tiara ===== */
+.moment-gallery{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  width:min(100%,650px);
+  margin:12px auto 0;
+}
+.moment-card{
+  padding:10px 10px 16px;
+  border:1px solid #ffffff;
+  border-radius:18px;
+  background:rgba(255,253,252,.92);
+  box-shadow:0 15px 35px #78425d20;
+  transform:rotate(-1.5deg);
+  animation:fadeUp .6s ease both;
+}
+.moment-card:nth-child(even){transform:rotate(1.5deg)}
+.moment-photo{
+  width:100%;
+  aspect-ratio:4/5;
+  border-radius:12px;
+  object-fit:cover;
+  display:block;
+  background:linear-gradient(145deg,#ffd6e5,#e8ddff);
+}
+.moment-caption{
+  margin:12px 2px 0;
+  color:var(--plum);
+  font-family:"Playfair Display",serif;
+  font-size:1rem;
+  font-style:italic;
+  font-weight:700;
+}
+.moment-hint{font-size:.85rem;color:var(--muted);margin-top:20px}
+@media(max-width:420px){
+  .moment-gallery{gap:12px}
+  .moment-card{padding:7px 7px 12px;border-radius:14px}
+  .moment-caption{font-size:.88rem}
+}
+
+@media(max-width:420px){section{padding-left:16px;padding-right:16px}.card{border-radius:25px}.count{gap:6px}.count div{padding:13px 2px}.count span{font-size:.65rem}.pol{flex-basis:210px}.ph{height:215px}.ico{width:130px;height:130px;font-size:3.8rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<button id="music" class="btn" aria-label="Nyalakan atau matikan musik" title="Musik">♫</button>
+<button id="back" class="btn secondary hidden">◀ BACK</button>
+<canvas id="cv" aria-hidden="true"></canvas>
+
+<section id="s0">
+  <div class="hero">
+    <div class="pill">✦ a little surprise for you ✦</div>
+    <div class="big" style="margin-top:24px">💌</div>
+    <p class="eyebrow">khusus untuk seseorang</p>
+    <h1>Hai, Tiara<span style="color:var(--rose)">.</span></h1>
+    <p class="subtitle">Aku punya sesuatu kecil yang aku siapin buat kamu. Tapi sebelum masuk, jawab satu hal yang cuma kita yang tahu, ya 🤍</p>
+    <div class="card">
+      <div style="font-size:2rem">🗓️</div>
+      <h2 style="font-size:1.65rem;margin:10px 0">Kapan tanggal jadian kita?</h2>
+      <p style="font-size:.9rem;color:var(--muted);margin:0">Masukkan tanggal spesial kita untuk membuka surat ini.</p>
+      <form id="dateForm">
+        <div class="date-wrap">
+          <label for="anniversary">Tanggal jadian kita</label>
+          <input id="anniversary" type="date" required aria-describedby="dateError">
+        </div>
+        <p id="dateError" class="error" role="status"></p>
+        <button class="btn" type="submit" style="width:100%">Buka surat rahasia ♡</button>
+      </form>
+      <p class="note">dibuat dengan sayang, untuk Tiara 🤍</p>
+    </div>
+  </div>
+</section>
+
+<section id="s1" class="hidden">
+  <div class="card"><p class="eyebrow">from my heart</p><div class="big">🌷</div><h2>Untuk Tiara</h2><div id="typed"></div></div>
+</section>
+
+<section id="menu" class="hidden">
+  <p class="eyebrow">pilih salah satu</p>
+  <h1>Choose the Surprise 🐱</h1>
+  <p class="subtitle">Klik salah satu kejutan di bawah ini dan semuanya yaaaaa</p>
+  <div class="menu-grid">
+    <button class="opt" data-go="s2"><div class="ico">📷</div><span class="lab">Journey</span></button>
+    <button class="opt" data-go="s3"><div class="ico">⏱️</div><span class="lab">Our Moment</span></button>
+    <button class="opt" data-go="s4"><div class="ico">🎁</div><span class="lab">Love Letter</span></button>
+  </div>
+</section>
+
+<section id="s2" class="hidden">
+  <p class="eyebrow">little moments, big memories</p><h2>Kenangan Kita 📸</h2>
+  <p class="subtitle">Hal-hal sederhana yang jadi spesial karena ada kamu.</p>
+  <div class="gallery" id="gal"></div>
+  <p style="color:var(--muted);font-size:.85rem">← geser untuk lihat kenangan →</p>
+</section>
+
+<section id="s3" class="hidden">
+  <p class="eyebrow">my favorite person ♡</p>
+  <h2>Our Moment 📸</h2>
+  <p class="subtitle">Beberapa foto kamu yang selalu berhasil bikin aku senyum sendiri 🤍</p>
+  <div class="moment-gallery" id="momentGallery"></div>
+  <p class="moment-hint">♡ geser ke samping untuk lihat foto lainnya ♡</p>
+</section>
+
+<section id="s4" class="hidden">
+  <div class="card"><div class="big">🐱</div><p class="eyebrow">one last question</p><h2 id="q">Kamu sayang aku nggak?</h2>
+    <p style="color:var(--muted)">Jawab yang jujur, yaa 😚</p>
+    <div class="row"><button class="btn" id="yes">Sayang dong! 💖</button><button class="btn secondary" id="no">Nggak 😝</button></div>
+  </div>
+</section>
+
+<section id="s5" class="hidden">
+  <div class="card"><div class="big">🧸💕</div><p class="eyebrow">always, with love</p>
+    <h1 style="font-size:clamp(2.5rem,8vw,3.6rem)">Makasih ya,<br>Tiara.</h1>
+    <p style="line-height:1.95">Makasih udah jadi diri kamu sendiri. Tiara Azita Safitri, cewek yang selalu punya cara buat bikin hari-hariku lebih berwarna. Aku mungkin nggak selalu sempurna, tapi aku mau terus belajar jadi seseorang yang lebih baik buat diri sendiri dan buat hubungan kita. Semoga kita selalu bisa saling jaga, saling dukung, dan tumbuh bareng. Aku sayang kamu, hari ini dan seterusnya. 🤍</p>
+    <p class="signature">— Fauzan ♡</p>
+    <div style="font-size:1.7rem;letter-spacing:.3em;margin-top:12px">♡ ✿ ♡</div>
+  </div>
+</section>
+<footer>made with ♡, just for Tiara</footer>
+
+<script>
+/* ===== PERSONALISASI: ubah tanggal dan isi pesan di sini ===== */
+var START_DATE = "2026-07-29"; 
+var MESSAGE = "Hai sayang, ini bukan hari spesial apa-apa. Tapi aku pengin kamu tahu, kamu selalu spesial buat aku. Makasih udah sabar, lucu, dan bikin hari-hariku lebih berwarna. Aku bersyukur bisa kenal kamu dan punya kesempatan buat jalan bareng kamu. Semoga kita terus belajar memahami satu sama lain, ya. Aku sayang kamu. 🤍";
+var PHOTOS = [
+  {img:"assets/awalketemu.jpeg", emo:"🐻", cap:"Hari pertama kita"},
+  {img:"assets/tiara2.jpeg", emo:"🌸", cap:"Cantiknya dari zaman sekolah"},
+  {img:"assets/naikkereta.jpeg", emo:"🍦", cap:"Naik kereta bareng kamu"},
+  {img:"assets/tiara3.jpeg", emo:"🐱", cap:"Kamu gemes banget"}
+];
+/* ============================================================ */
+var $=function(id){return document.getElementById(id)};
+var cv=$("cv"),cx=cv.getContext("2d");
+function resizeCanvas(){var dpr=Math.min(window.devicePixelRatio||1,2);cv.width=innerWidth*dpr;cv.height=innerHeight*dpr;cv.style.width=innerWidth+"px";cv.style.height=innerHeight+"px";cx.setTransform(dpr,0,0,dpr,0,0)}
+resizeCanvas();addEventListener("resize",resizeCanvas);
+
+function confetti(){
+  var colors=["#f48eae","#c9b5f5","#ffd7a8","#fff0a8","#a8e5d5"],parts=[];
+  for(var i=0;i<120;i++)parts.push({x:innerWidth/2,y:innerHeight*.42,vx:(Math.random()-.5)*12,vy:Math.random()*-12-2,c:colors[i%colors.length],s:4+Math.random()*7,r:Math.random()*6});
+  var frame=0;
+  (function animate(){cx.clearRect(0,0,innerWidth,innerHeight);parts.forEach(function(p){p.vy+=.24;p.x+=p.vx;p.y+=p.vy;p.r+=.12;cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);cx.fillStyle=p.c;cx.fillRect(-p.s/2,-p.s/2,p.s,p.s*.65);cx.restore()});if(++frame<150)requestAnimationFrame(animate);else cx.clearRect(0,0,innerWidth,innerHeight)})();
+}
+var heartTimer;
+function hearts(){
+  if(heartTimer)return;
+  var emojis=["♡","💕","🌸","✦","💗","✿"];
+  heartTimer=setInterval(function(){var d=document.createElement("div");d.className="fl";d.textContent=emojis[Math.random()*emojis.length|0];d.style.left=Math.random()*96+"vw";d.style.fontSize=14+Math.random()*18+"px";d.style.animationDuration=7+Math.random()*5+"s";document.body.appendChild(d);setTimeout(function(){d.remove()},12500)},850);
+}
+
+/* Navigasi: hanya satu halaman tampil, tombol BACK kembali ke menu */
+var PAGES=["s0","s1","menu","s2","s3","s4","s5"];
+function show(id){
+  PAGES.forEach(function(p){$(p).classList.toggle("hidden",p!==id)});
+  $("back").classList.toggle("hidden",["s0","s1","menu"].indexOf(id)>-1);
+  window.scrollTo(0,0);
+}
+$("back").onclick=function(){show("menu")};
+document.querySelectorAll("[data-go]").forEach(function(b){b.onclick=function(){show(b.dataset.go)}});
+
+function startLetter(){
+  hearts();confetti();show("s1");
+  var i=0,t=$("typed");t.textContent="";
+  (function type(){if(i<MESSAGE.length){t.textContent+=MESSAGE.charAt(i++);setTimeout(type,32)}else{var b=document.createElement("button");b.className="btn";b.textContent="Pilih kejutanmu 🎁";b.style.marginTop="20px";b.onclick=function(){show("menu")};t.appendChild(document.createElement("br"));t.appendChild(b)}})();
+}
+$("dateForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  var entered=$("anniversary").value;
+  $("dateError").textContent="";
+  if(!entered){$("dateError").textContent="Pilih tanggalnya dulu, ya 🤍";return}
+  if(entered===START_DATE){$("dateError").style.color="#438a70";$("dateError").textContent="Benar! Surat rahasianya terbuka 💗";setTimeout(startLetter,450)}
+  else{$("dateError").style.color="#c34d79";$("dateError").textContent="Hmm, belum tepat nih. Coba ingat-ingat lagi tanggal spesial kita 🥺"}
+});
+
+/* Kenangan foto: isi img dengan nama/path foto, misalnya "foto1.jpg" */
+PHOTOS.forEach(function(p){
+  var d=document.createElement("div");d.className="pol";
+  var ph=document.createElement("div");ph.className="ph";
+  if(p.img){ph.style.backgroundImage="url('"+p.img.replace(/'/g,"%27")+"')";ph.setAttribute("aria-label",p.cap)}
+  else ph.textContent=p.emo;
+  var cap=document.createElement("p");cap.textContent=p.cap;d.appendChild(ph);d.appendChild(cap);$("gal").appendChild(d);
+});
+
+/* Our Moment menggunakan foto yang sama; caption bisa lo ganti sendiri */
+var MOMENT_PHOTOS = [
+  {img:"assets/awalketemu.jpeg", cap:"Senyum kamu, favorit aku 🤍"},
+  {img:"assets/tiara2.jpeg", cap:"Cantik tanpa perlu berusaha 🌷"},
+  {img:"assets/naikkereta.jpeg", cap:"Momen sederhana yang aku suka 🚆"},
+  {img:"assets/tiara3.jpeg", cap:"Gemesnya kamu nggak ada obat 🐱"}
+];
+MOMENT_PHOTOS.forEach(function(p, index){
+  var card=document.createElement("article");
+  card.className="moment-card";
+  card.style.animationDelay=(index * 0.1)+"s";
+
+  var img=document.createElement("img");
+  img.className="moment-photo";
+  img.src=p.img;
+  img.alt=p.cap;
+  img.loading="lazy";
+  img.onerror=function(){
+    img.style.display="none";
+    var fallback=document.createElement("div");
+    fallback.className="moment-photo";
+    fallback.style.display="grid";
+    fallback.style.placeItems="center";
+    fallback.style.fontSize="3rem";
+    fallback.textContent="🌷";
+    img.insertAdjacentElement("afterend", fallback);
+  };
+
+  var caption=document.createElement("p");
+  caption.className="moment-caption";
+  caption.textContent=p.cap;
+
+  card.appendChild(img);
+  card.appendChild(caption);
+  $("momentGallery").appendChild(card);
+});
+
+
+/* Musik nada lembut dari Web Audio API; mulai setelah interaksi pengguna */
+var audioCtx=null,playing=false,musicTimer=null;
+var notes=[523.25,659.25,783.99,659.25,587.33,698.46,880,698.46,523.25,659.25,783.99,698.46];
+function ui(){$("music").textContent=playing?"♫":"🔇";$("music").setAttribute("aria-label",playing?"Matikan musik":"Nyalakan musik")}
+function startMusic(){
+  if(playing)return;
+  try{audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();audioCtx.resume();var i=0;
+    musicTimer=setInterval(function(){if(!audioCtx)return;var osc=audioCtx.createOscillator(),gain=audioCtx.createGain();osc.type="sine";osc.frequency.value=notes[i++%notes.length];gain.gain.setValueAtTime(.0001,audioCtx.currentTime);gain.gain.exponentialRampToValueAtTime(.045,audioCtx.currentTime+.035);gain.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+.72);osc.connect(gain);gain.connect(audioCtx.destination);osc.start();osc.stop(audioCtx.currentTime+.75)},600);
+    playing=true;
+  }catch(e){}
+  ui();
+}
+function stopMusic(){clearInterval(musicTimer);musicTimer=null;playing=false;ui()}
+function toggleMusic(){playing?stopMusic():startMusic()}
+$("music").onclick=toggleMusic;ui();
+
+var no=$("no"),tries=0,lines=["Yakin nih? 🥺","Coba pikir lagi 😆","Masa sih? 🙈","Hehe, coba lagi 😝"];
+function dodge(e){if(e)e.preventDefault();tries++;var maxX=Math.max(40,Math.min(innerWidth*.28,120)),maxY=48;no.style.transform="translate("+((Math.random()*2-1)*maxX)+"px,"+((Math.random()*2-1)*maxY)+"px)";$("q").textContent=lines[(tries-1)%lines.length]}
+no.addEventListener("mouseenter",dodge);no.addEventListener("touchstart",dodge,{passive:false});no.addEventListener("click",dodge);
+$("yes").onclick=function(){confetti();setTimeout(confetti,550);show("s5")};
+</script>
+</body>
+</html> 
